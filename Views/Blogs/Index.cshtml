@@ -1,0 +1,26 @@
+@model Blogs.Models.ListBlogs
+
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+<h1>My Adventures</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="blogs">
+     @foreach (var item in Model.Blogs!)
+        {   
+        <div class="blog">
+            <img src="@item.ImagePath" alt="Image"/>
+            <div>
+                @Html.DisplayFor(modelItem => item.Title)
+
+                @Html.DisplayFor(modelItem => item.Description)
+
+            </div>
+        </div>
+        }
+</div>
