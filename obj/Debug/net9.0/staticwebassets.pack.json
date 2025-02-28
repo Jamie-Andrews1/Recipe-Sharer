@@ -2,15 +2,27 @@
   "Files": [
     {
       "Id": "/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css",
-      "PackagePath": "staticwebassets/c#Backend.g2eicvfwae.bundle.scp.css"
+      "PackagePath": "staticwebassets/c#Backend.74kgn2kfvy.bundle.scp.css"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/3 Colour Mushroom.jpg",
-      "PackagePath": "staticwebassets/Images/3 Colour Mushroom.jpg"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/5kajr0rz.yxw3 Colour Mushroom.jpg",
+      "PackagePath": "staticwebassets/Images/5kajr0rz.yxw3 Colour Mushroom.jpg"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/l1250jru.4sn3 colour mushroom 2.jpg",
-      "PackagePath": "staticwebassets/Images/l1250jru.4sn3 colour mushroom 2.jpg"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/fcadjfk0.2kq3 colour mushroom 2.jpg",
+      "PackagePath": "staticwebassets/Images/fcadjfk0.2kq3 colour mushroom 2.jpg"
+    },
+    {
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/id20po3k.aek3 Colour Mushroom.jpg",
+      "PackagePath": "staticwebassets/Images/id20po3k.aek3 Colour Mushroom.jpg"
+    },
+    {
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/meooluvu.t0n3 colour mushroom 2.jpg",
+      "PackagePath": "staticwebassets/Images/meooluvu.t0n3 colour mushroom 2.jpg"
+    },
+    {
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/mvcys4x0.vgb3 Colour Mushroom.jpg",
+      "PackagePath": "staticwebassets/Images/mvcys4x0.vgb3 Colour Mushroom.jpg"
     },
     {
       "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/css/site.css",
@@ -263,6 +275,10 @@
     {
       "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.slim.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
+    },
+    {
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/styles.css",
+      "PackagePath": "staticwebassets/styles.css"
     },
     {
       "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.c#Backend.props",

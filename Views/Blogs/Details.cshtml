@@ -1,0 +1,18 @@
+@using System.IO
+@model Blogs.Models.Blog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+    <div class="blogWrapper">
+        <div class="blog">
+            <img src="~/@Model.ImagePath" alt="Image"/>
+            <div class="blogTxt">
+                <h3>@Html.DisplayFor(model => model.Title)</h3>
+                <p>@Html.DisplayFor(model => model.Description)</p>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            </div>
+        </div>
+    </div>  

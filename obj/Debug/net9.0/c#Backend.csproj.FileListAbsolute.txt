@@ -17,7 +17,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/bundle/c#Backend.styles.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-lugek5hnai.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-61n19gt1b8.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/erbb4kgnmw-fr7q2aak1r.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/je17n555hq-bqjiyaj88i.gz
@@ -28,7 +27,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/0hv1kl2rwa-ausgxo2sd3.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/n0mbltsnr1-k8d9w2qqmf.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/00o05d2ell-cosvhxvwiu.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/axfr3gxiza-ub07r2b239.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/tgtzlzf3r9-fvhpjtyr6v.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/y8dyu4sifm-b7pk76d08c.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/47if5xhuxg-fsbi9cje9m.gz
@@ -124,16 +122,7 @@
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Identity.Client.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
@@ -173,13 +162,11 @@
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Composition.Runtime.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Composition.TypedParts.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Formats.Asn1.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Memory.Data.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Reflection.MetadataLoadContext.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Runtime.Caching.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
-/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/System.Text.Json.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/af/Humanizer.resources.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/ar/Humanizer.resources.dll
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/az/Humanizer.resources.dll
@@ -363,5 +350,8 @@
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/c#Backend.csproj.Up2Date
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/Views/Blogs/Index.cshtml.rz.scp.css
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/4kcbymp3iu-g2eicvfwae.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/9oqj6emytq-g2eicvfwae.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/axfr3gxiza-q6udctq4z8.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/82qtezg7t9-57h62c80an.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/4kcbymp3iu-74kgn2kfvy.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/9oqj6emytq-74kgn2kfvy.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-mwc07s5j43.gz
