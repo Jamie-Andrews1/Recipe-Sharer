@@ -6,13 +6,16 @@
 }
 
 <h1>Details</h1>
-    <div class="blogWrapper">
-        <div class="blog">
-            <img src="~/@Model.ImagePath" alt="Image"/>
-            <div class="blogTxt">
-                <h3>@Html.DisplayFor(model => model.Title)</h3>
-                <p>@Html.DisplayFor(model => model.Description)</p>
+<div class="blogWrapper">
+    <div class="blog">
+        <img src="~/@Model.ImagePath" alt="Image" />
+        <div class="blogTxt">
+            <h3>@Html.DisplayFor(model => model.Title)</h3>
+            <p>@Html.DisplayFor(model => model.Description)</p>
             <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-            </div>
         </div>
-    </div>  
+        <div style="text-align: center;">
+            <a asp-action="Index">Back to Main</a>
+        </div>
+    </div>
+</div>

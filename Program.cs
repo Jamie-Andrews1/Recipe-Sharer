@@ -1,11 +1,11 @@
-using Microsoft.EntityFrameworkCore;
 using Blogs.Data;
+using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);   
+var builder = WebApplication.CreateBuilder(args);
 
 // Add database
- builder.Services.AddDbContext<BlogContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("BlogContext") ?? throw new InvalidOperationException("Connection string 'BlogContext' not found.")));
+builder.Services.AddDbContext<BlogContext>(options =>
+       options.UseSqlite(builder.Configuration.GetConnectionString("BlogContext") ?? throw new InvalidOperationException("Connection string 'BlogContext' not found.")));
 
 
 // Add services to the container.

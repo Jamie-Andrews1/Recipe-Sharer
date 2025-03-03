@@ -2,27 +2,15 @@
   "Files": [
     {
       "Id": "/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css",
-      "PackagePath": "staticwebassets/c#Backend.74kgn2kfvy.bundle.scp.css"
+      "PackagePath": "staticwebassets/c#Backend.quk1wnjz5t.bundle.scp.css"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/5kajr0rz.yxw3 Colour Mushroom.jpg",
-      "PackagePath": "staticwebassets/Images/5kajr0rz.yxw3 Colour Mushroom.jpg"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/lhotoc5o.piu3 Colour Mushroom.jpg",
+      "PackagePath": "staticwebassets/Images/lhotoc5o.piu3 Colour Mushroom.jpg"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/fcadjfk0.2kq3 colour mushroom 2.jpg",
-      "PackagePath": "staticwebassets/Images/fcadjfk0.2kq3 colour mushroom 2.jpg"
-    },
-    {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/id20po3k.aek3 Colour Mushroom.jpg",
-      "PackagePath": "staticwebassets/Images/id20po3k.aek3 Colour Mushroom.jpg"
-    },
-    {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/meooluvu.t0n3 colour mushroom 2.jpg",
-      "PackagePath": "staticwebassets/Images/meooluvu.t0n3 colour mushroom 2.jpg"
-    },
-    {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/mvcys4x0.vgb3 Colour Mushroom.jpg",
-      "PackagePath": "staticwebassets/Images/mvcys4x0.vgb3 Colour Mushroom.jpg"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/xrhkeyae.j133 colour mushroom 2.jpg",
+      "PackagePath": "staticwebassets/Images/xrhkeyae.j133 colour mushroom 2.jpg"
     },
     {
       "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/css/site.css",
@@ -217,64 +205,64 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation/LICENSE.md",
-      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation/dist/additional-methods.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/LICENSE.txt",
-      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/LICENSE.txt"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.js",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.min.js",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.min.map",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.slim.js",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.slim.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.slim.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.slim.min.js",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.slim.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.slim.min.js"
     },
     {
-      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/jquery/dist/jquery.slim.min.map",
-      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
+      "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/lib/bootstrap/jquery/dist/jquery.slim.min.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/jquery/dist/jquery.slim.min.map"
     },
     {
       "Id": "/home/jamie/Documents/html/c#Backend/wwwroot/styles.css",

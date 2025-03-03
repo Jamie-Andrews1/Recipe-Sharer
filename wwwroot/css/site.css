@@ -1,10 +1,28 @@
-@include color-mode(dark) {
-  html {
-    color-scheme: light dark;
-    font-size: 14px;
-  }
+html {
+  font-size: 14px;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: grid;
+  grid-template-rows:
+    auto
+    1fr
+    auto;
+}
+.container:has(main) {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+.form-group {
+  margin-block: 1rem;
 }
 
+footer {
+  padding-block: 0.5rem;
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -22,10 +40,6 @@
 html {
   position: relative;
   min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
 }
 
 .form-floating > .form-control-plaintext::placeholder,
