@@ -1,10 +1,9 @@
-using System.IO;
 using System.Web;
 using Blogs.Data;
 using Blogs.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Blogs.Controllers
 {
@@ -58,6 +57,7 @@ namespace Blogs.Controllers
         }
 
         // Get: Create Blogs
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -119,8 +119,8 @@ namespace Blogs.Controllers
             return View(Blog);
         }
 
-
         // Post: Edit Blogs
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id, ImagePath, Title, Description")] Blog blog, IFormFile file, string url)

@@ -1,11 +1,44 @@
 using Blogs.Data;
+using Identity.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Users.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add database
 builder.Services.AddDbContext<BlogContext>(options =>
        options.UseSqlite(builder.Configuration.GetConnectionString("BlogContext") ?? throw new InvalidOperationException("Connection string 'BlogContext' not found.")));
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext")));
+
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+// builder.Services
+//     .AddAuthentication(config =>
+//     {
+//         config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+//     })
+//     .AddJwtBearer(config =>
+//     {
+//         config.RequireHttpsMetadata = false;
+//         config.SaveToken = true;
+//         config.TokenValidationParameters = new TokenValidationParameters
+//         {
+//             ValidateIssuerSigningKey = true,
+//             IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"]!)),
+//             ValidateIssuer = false,
+//             ValidateAudience = false
+//         };
+//     });
 
 
 // Add services to the container.
@@ -24,14 +57,20 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
+app.MapControllerRoute(
+    name: "login",
+    pattern: "Account/Login",
+    new { controller = "Users", action = "Login" });
 
 app.Run();
