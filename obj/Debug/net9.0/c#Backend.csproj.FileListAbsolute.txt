@@ -278,7 +278,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/bundle/c#Backend.styles.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-a0rhqnqua0.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-61n19gt1b8.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/erbb4kgnmw-5p0iv2ff9j.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/je17n555hq-bqjiyaj88i.gz
@@ -358,3 +357,4 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/c#Backend.pdb
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/c#Backend.genruntimeconfig.cache
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/ref/c#Backend.dll
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-wiqp5jhmg7.gz

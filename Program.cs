@@ -1,10 +1,12 @@
 using Blogs.Data;
+using Identity;
 using Identity.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Users.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,28 +21,28 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddAuthorization();
 
 builder.Services.AddIdentity<User, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+// .AddDefaultTokenProviders();
 
-// builder.Services
-//     .AddAuthentication(config =>
-//     {
-//         config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-//     })
-//     .AddJwtBearer(config =>
-//     {
-//         config.RequireHttpsMetadata = false;
-//         config.SaveToken = true;
-//         config.TokenValidationParameters = new TokenValidationParameters
-//         {
-//             ValidateIssuerSigningKey = true,
-//             IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"]!)),
-//             ValidateIssuer = false,
-//             ValidateAudience = false
-//         };
-//     });
+builder.Services
+    .AddAuthentication(config =>
+    {
+        config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(config =>
+    {
+        config.RequireHttpsMetadata = false;
+        config.SaveToken = true;
+        config.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"]!)),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
 
-
+builder.Services.AddSingleton<TokenGenerator>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -62,7 +64,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
-
 
 app.MapControllerRoute(
     name: "default",

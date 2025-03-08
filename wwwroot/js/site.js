@@ -63,7 +63,6 @@
     lucide.createIcons();
     const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
     themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
-
     if (focus) {
       themeSwitcher.focus();
     }

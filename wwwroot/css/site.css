@@ -16,6 +16,38 @@ body {
   flex-direction: column;
   place-content: center;
 }
+.success {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  animation: popin 3s ease-in-out;
+}
+
+.fail {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  animation: popin 3s ease-in-out;
+}
+@keyframes popin {
+  0% {
+    transform: translateY(-100px);
+  }
+  30% {
+    transform: translateY(80px);
+  }
+  70% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
 .form-group {
   margin-block: 1rem;
 }

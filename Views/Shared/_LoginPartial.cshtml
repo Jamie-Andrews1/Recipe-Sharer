@@ -25,3 +25,47 @@ else
         <li><a class="nav-link" asp-area="" asp-controller="Users" asp-action="Login">Log in</a></li>
     </ul>
 }
+@if (TempData["Success"] != null)
+{
+    <div class="wrapper">
+        <script type="text/javascript">
+            const div = document.createElement("div");
+
+            div.role = "alert";
+
+            div.className = `alert success alert-success`;
+
+            div.appendChild(document.createTextNode("@TempData["Success"]"));
+
+            const body = document.querySelector("body");
+
+            body.appendChild(div);
+
+            setTimeout(function () {
+                document.querySelector(".alert").remove();
+            }, 3000);
+        </script>
+    </div>
+}
+@if (TempData["Fail"] != null)
+{
+    <div>
+        <script type="text/javascript">
+            const div = document.createElement("div");
+
+            div.className = `alert fail alert-danger`;
+
+            div.role = "alert"
+
+            div.appendChild(document.createTextNode("@TempData["Fail"]"));
+
+            const body = document.querySelector("body");
+
+            body.appendChild(div);
+
+            setTimeout(function () {
+                document.querySelector(".alert").remove();
+            }, 3000);
+        </script>
+    </div>
+}

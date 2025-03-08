@@ -5,9 +5,7 @@ using Identity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Users.Models;
 using Users.Models.AccountViews;
 
@@ -15,19 +13,23 @@ namespace Users.Controllers;
 
 public class UsersController : Controller
 {
-
     private readonly ApplicationDbContext _context;
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
+    private readonly TokenGenerator _tokenGenerator;
+
     private readonly ILogger _logger;
 
     public UsersController(
         UserManager<User> userManager, SignInManager<User> signInManager,
-        ApplicationDbContext context, ILogger<UsersController> logger)
+        ApplicationDbContext context,
+        TokenGenerator tokenGenerator,
+        ILogger<UsersController> logger)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _context = context;
+        _tokenGenerator = tokenGenerator;
         _logger = logger;
 
     }
@@ -58,29 +60,36 @@ public class UsersController : Controller
             // set lockoutOnFailure: true
             if (!string.IsNullOrEmpty(model.Email))
             {
+
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password!, model.RememberMe, lockoutOnFailure: false);
+
                 if (result.Succeeded)
                 {
+
+                    string access_token = _tokenGenerator.GeneratorToken(model.Email, model.Password!);
+
                     _logger.LogInformation("User logged in.");
+
+                    Response.Cookies.Append("JwtToken", access_token, new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true,
+                        SameSite = SameSiteMode.Strict,
+                        Expires = DateTime.UtcNow.AddHours(1)
+                    });
+
+                    TempData["Success"] = "Login Successful!";
+
                     return RedirectToLocal(returnUrl!);
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
-                }
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View(model);
             }
         }
         return View(model);
-
-        // if (ModelState.IsValid)
-        // {
-
-        //     var access_token = TokenGenerator.GeneratorToken(request.Email, request.Password);
-
-        //     return await Task.FromResult(Ok(new { access_token }));
-        // }
-        // return Unauthorized();
 
     }
 
@@ -109,9 +118,20 @@ public class UsersController : Controller
                     _logger.LogInformation("User created a new account with password.");
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    _logger.LogInformation("User created a new account with password.");
 
-                    return RedirectToAction("Index", "Home");
+                    var access_token = _tokenGenerator.GeneratorToken(user.Email!, model.Password!);
+                    Response.Cookies.Append("JwtToken", access_token, new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true,
+                        SameSite = SameSiteMode.Strict,
+                        Expires = DateTime.UtcNow.AddHours(1)
+                    });
+
+                    TempData["Success"] = "Login Successful!";
+
+                    return RedirectToLocal(returnUrl!);
+
                 }
                 foreach (var error in result.Errors)
                 {
@@ -128,6 +148,9 @@ public class UsersController : Controller
     {
         await _signInManager.SignOutAsync();
         _logger.LogInformation("User logged out.");
+
+        TempData["Fail"] = "You are Logged out!!.";
+
         return RedirectToAction(nameof(HomeController.Index), "Home");
     }
 
@@ -135,7 +158,13 @@ public class UsersController : Controller
     {
         return View();
     }
-
+    private void AddErrors(IdentityResult result)
+    {
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+    }
     private IActionResult RedirectToLocal(string returnUrl)
     {
         if (Url.IsLocalUrl(returnUrl))
