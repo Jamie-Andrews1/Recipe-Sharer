@@ -279,7 +279,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/bundle/c#Backend.styles.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-61n19gt1b8.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/erbb4kgnmw-5p0iv2ff9j.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/je17n555hq-bqjiyaj88i.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/o2chdfcrwt-c2jlpeoesf.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/hrgbr74ww6-erw9l3u2r3.gz
@@ -324,15 +323,10 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/y8fb90cpge-h1s4sie4z3.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/4ubilpfgcc-63fj8s7r0e.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/v8u1izsugd-0j3bgjxly4.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/1k9hi3xoyl-47otxtyo56.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/19slnno5qw-4v8eqarkd7.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/kmz28i1pq4-l3n5xuwxn8.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/6t3dkh1riy-ilo7uva0vt.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/edisqkmepz-qlccset4i1.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/6makj9d3py-lzl9nlhx6b.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/oq21nxeyxl-ag7o75518u.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/8xr0i2czor-xzw0cte36n.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/yi0j3hr053-0i3buxo5is.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/y0nr8kagn4-o1o13a6vjx.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/8yhbf85bjz-ttgo8qnofa.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/hm0eugpnhz-2z0ns9nrw6.gz
@@ -357,4 +351,10 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/c#Backend.pdb
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/c#Backend.genruntimeconfig.cache
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/ref/c#Backend.dll
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-wiqp5jhmg7.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/erbb4kgnmw-mxnykxd5up.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/1k9hi3xoyl-h48sgdmo9j.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/6t3dkh1riy-a9d5zppctt.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/6makj9d3py-1jb69e76f4.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/yi0j3hr053-mo1f5uecr7.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/19slnno5qw-pg0cdz024x.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-lj3ctu56pt.gz

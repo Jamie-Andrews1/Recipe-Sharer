@@ -2,11 +2,44 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <a asp-controller="Blogs" asp-action="Index" style="text-decoration: none; color: currentColor;">
-        <h1 class=" display-4">My Blog</h1>
-        <h2>Adventures in code.</h2>
-    </a>
-    <section>
-    </section>
+<div class="home">
+    <div class="PParent">
+        <div class="imgWrapper">
+        </div>
+    </div>
+    <div class="homeText">
+        <a asp-controller="Blogs" asp-action="Index" style="text-decoration: none; color: currentColor;">
+            <h1 class=" display-4">My Blog</h1>
+            <h2>Adventures in codeland.</h2>
+        </a>
+    </div>
+    <div class="two align-self-end">
+        <div class="imgWrapper next">
+        </div>
+    </div>
 </div>
+
+<script type="text/javascript">
+    const imgBody = document.querySelector("body");
+    const giraffe = document.querySelectorAll(".imgWrapper")
+
+    for (let i of giraffe) {
+        i.addEventListener("mousemove", (event) => {
+            const { currentTarget: target } = event;
+            const coordX = event.clientX;
+            const coordY = event.clientY;
+            let rect = target.getBoundingClientRect();
+
+            let x = coordX - rect.left - rect.width / 2;
+            let y = coordY - rect.top - rect.height / 2;
+
+            const rotateX = (-y / rect.height) * 20;
+            const rotateY = (x / rect.width) * 20;
+
+            i.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        })
+        i.addEventListener('mouseleave', () => {
+            i.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    }
+</script>

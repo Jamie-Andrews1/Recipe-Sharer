@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using c_Backend.Controllers;
 using Identity;
 using Identity.Data;
@@ -55,9 +54,6 @@ public class UsersController : Controller
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            // This does not count login failures towards account lockout
-            // To enable password failures to trigger account lockout,
-            // set lockoutOnFailure: true
             if (!string.IsNullOrEmpty(model.Email))
             {
 
@@ -152,6 +148,10 @@ public class UsersController : Controller
         TempData["Fail"] = "You are Logged out!!.";
 
         return RedirectToAction(nameof(HomeController.Index), "Home");
+    }
+    public IActionResult ForgotPassword()
+    {
+        return View();
     }
 
     public IActionResult AccessDenied()

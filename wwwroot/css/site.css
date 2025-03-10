@@ -11,10 +11,57 @@ body {
     1fr
     auto;
 }
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "first . ."
+    ".  mid ."
+    ". .  second";
+}
+.PParent {
+  perspective: 150px;
+  grid-area: first;
+}
+.homeText {
+  grid-area: mid;
+}
+
+.two {
+  perspective: 150px;
+  grid-area: second;
+}
+.imgWrapper {
+  aspect-ratio: 1;
+  width: 10rem;
+  rotate: 315deg;
+  background-image: url("/Images/Ellie.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid currentColor;
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+}
+
+.next {
+  aspect-ratio: 1;
+  width: 10rem;
+  rotate: 135deg;
+  background-image: url("/Images/Ellie.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid currentColor;
+}
+
 .container:has(main) {
   display: flex;
   flex-direction: column;
   place-content: center;
+  perspective: 500px;
 }
 .success {
   position: absolute;
@@ -58,6 +105,16 @@ footer {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "mid"
+      "second";
+    gap: 2rem;
   }
 }
 

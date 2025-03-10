@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Users.Models;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add database
@@ -22,7 +21,6 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
-// .AddDefaultTokenProviders();
 
 builder.Services
     .AddAuthentication(config =>
@@ -37,14 +35,21 @@ builder.Services
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"]!)),
-            ValidateIssuer = false,
-            ValidateAudience = false
+            ValidateIssuer = true,
+            ValidateAudience = true
         };
     });
+
 
 builder.Services.AddSingleton<TokenGenerator>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Users/AccessDenied";
+    options.LoginPath = "/Users/Login";
+});
 
 var app = builder.Build();
 
@@ -69,9 +74,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-app.MapControllerRoute(
-    name: "login",
-    pattern: "Account/Login",
-    new { controller = "Users", action = "Login" });
 
 app.Run();

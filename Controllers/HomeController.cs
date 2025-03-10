@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Blogs.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace c_Backend.Controllers;
 
@@ -19,10 +19,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
-    {
-        return View();
-    }
-    public IActionResult Dump()
     {
         return View();
     }
