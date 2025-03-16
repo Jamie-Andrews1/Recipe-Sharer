@@ -32,7 +32,6 @@ namespace cBackend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")

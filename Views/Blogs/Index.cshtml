@@ -1,13 +1,18 @@
-@model Blogs.Models.ListBlogs
+@using myStringHelper;
 
+@model Blogs.Models.ListBlogs
 @{
-    ViewData["Title"] = "Blogs";
+    ViewData["Title"] = "Recipes";
 }
 
-<h1>My Adventures</h1>
+<h1>Recipe Collection</h1>
 
 <a class="nav-link" asp-action="Create">Create New</a>
 
+<span>Sort By:
+    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Title</a>
+    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Date Created</a>
+</span>
 <div class="blogs">
     @foreach (var item in Model.Blogs!)
     {

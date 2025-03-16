@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace cBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250316115440_InitialCreate")]
+    [Migration("20250316130021_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -35,7 +35,6 @@ namespace cBackend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")

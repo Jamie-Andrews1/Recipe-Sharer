@@ -12,7 +12,7 @@ namespace Application.Data
         {
         }
 
-        public DbSet<Blog> Blogs { get; set; } = default!;
+        public DbSet<Blog> Blogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

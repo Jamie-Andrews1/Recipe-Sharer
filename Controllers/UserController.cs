@@ -16,7 +16,6 @@ public class UsersController : Controller
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
     private readonly TokenGenerator _tokenGenerator;
-
     private readonly ILogger _logger;
 
     public UsersController(
@@ -105,7 +104,7 @@ public class UsersController : Controller
     {
         if (ModelState.IsValid)
         {
-            var user = new User { UserName = model.Email, Email = model.Email };
+            var user = new User { UserName = model.UserName, Email = model.Email };
             if (!string.IsNullOrEmpty(model.Password))
             {
                 var result = await _userManager.CreateAsync(user, model.Password);

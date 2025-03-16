@@ -18,26 +18,45 @@ namespace Blogs.Controllers
         }
 
         // Get Blogs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
+
             if (_context.Blogs == null)
             {
                 return Problem("Entity set 'BlogContext.Blog' is null.");
-
-
             }
-            var blogs = new ListBlogs
-            {
-                Blogs = await _context.Blogs.Include(b => b.User).ToListAsync()
-            };
+            ViewData["NameSortParm"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
 
+            var blogs = from s in _context.Blogs select s;
 
             if (blogs == null)
             {
                 return View("NoBlogs");
             }
 
-            return View(blogs);
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    blogs = blogs.OrderByDescending(s => s.Title);
+                    break;
+                case "Date":
+                    blogs = blogs.OrderBy(s => s.DateCreated);
+                    break;
+                case "date_desc":
+                    blogs = blogs.OrderByDescending(s => s.DateCreated);
+                    break;
+                default:
+                    blogs = blogs.OrderBy(s => s.Title);
+                    break;
+            }
+
+            var recipes = new ListBlogs
+            {
+                Blogs = await blogs.AsNoTracking().Include(b => b.User).ToListAsync()
+            };
+
+            return View(recipes);
         }
 
         //Get: Blog
@@ -72,6 +91,9 @@ namespace Blogs.Controllers
         public async Task<IActionResult> Create([Bind("Id, ImagePath, Title, Description")] Blog blog, IFormFile file)
         {
 
+            ModelState.Remove("UserId");
+            ModelState.Remove("User");
+
             if (ModelState.IsValid)
             {
                 try
@@ -90,7 +112,6 @@ namespace Blogs.Controllers
                     blog.DateCreated = DateTime.UtcNow;
 
                     blog.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
-
 
                     _context.Add(blog);
                     await _context.SaveChangesAsync();
@@ -225,7 +246,6 @@ namespace Blogs.Controllers
                 return Problem($"An error occurred while deleting the blog: {ex.Message}");
             }
         }
-
 
 
         private bool BlogExists(int id)

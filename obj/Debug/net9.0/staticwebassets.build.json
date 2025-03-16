@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IY8xf1wQDJhZfQ87r06mQNxTb8tBkVBHo5tCKq8VAug=",
+  "Hash": "ewn6Q7AfGRnzeQ0O3yhMlFCPpfgGoX5M+jjjAtK6+RA=",
   "Source": "c#Backend",
   "BasePath": "_content/c#Backend",
   "Mode": "Default",
@@ -1466,12 +1466,75 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mcmohks.tyn3 colour mushroom 2.jpg",
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mmpu34q.i0ubrittle.jpeg",
       "SourceId": "c#Backend",
       "SourceType": "Discovered",
       "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
       "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/0mcmohks.tyn3 colour mushroom 2#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/0mmpu34q.i0ubrittle#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ka307j67qh",
+      "Integrity": "VDz264uGSzSHuw7UAzGGZ7qEAliYpahgpn2k8gGOVhE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/0mmpu34q.i0ubrittle.jpeg"
+    },
+    {
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/2lhbaolg.sncBlock Colour Mushroom.jpg",
+      "SourceId": "c#Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
+      "BasePath": "_content/c#Backend",
+      "RelativePath": "Images/2lhbaolg.sncBlock Colour Mushroom#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "826egb4iz1",
+      "Integrity": "MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/2lhbaolg.sncBlock Colour Mushroom.jpg"
+    },
+    {
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/30oegsbi.vidAmethyst.jpg",
+      "SourceId": "c#Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
+      "BasePath": "_content/c#Backend",
+      "RelativePath": "Images/30oegsbi.vidAmethyst#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9uom034u4e",
+      "Integrity": "vyxcxfGXyarWmgLam2txrXDfyqakJIvOLykncgCGMi8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/30oegsbi.vidAmethyst.jpg"
+    },
+    {
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/b5zohhbm.nwk3 colour mushroom 2.jpg",
+      "SourceId": "c#Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
+      "BasePath": "_content/c#Backend",
+      "RelativePath": "Images/b5zohhbm.nwk3 colour mushroom 2#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1484,28 +1547,7 @@
       "Integrity": "O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/0mcmohks.tyn3 colour mushroom 2.jpg"
-    },
-    {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/btpwv0rs.0m2Black Obsidian.jpg",
-      "SourceId": "c#Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
-      "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/btpwv0rs.0m2Black Obsidian#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "10cd92zqp1",
-      "Integrity": "/+DrGWBjMEfh6LVbC/lgerFciXuZGsbaAGlnSffM3nQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/btpwv0rs.0m2Black Obsidian.jpg"
+      "OriginalItemSpec": "wwwroot/Images/b5zohhbm.nwk3 colour mushroom 2.jpg"
     },
     {
       "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/Ellie.jpg",
@@ -1529,48 +1571,6 @@
       "OriginalItemSpec": "wwwroot/Images/Ellie.jpg"
     },
     {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/gwkv1fhx.35eBlock Colour Mushroom.jpg",
-      "SourceId": "c#Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
-      "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/gwkv1fhx.35eBlock Colour Mushroom#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "826egb4iz1",
-      "Integrity": "MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/gwkv1fhx.35eBlock Colour Mushroom.jpg"
-    },
-    {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/k5gkr3f5.tvv3 Colour Mushroom.jpg",
-      "SourceId": "c#Backend",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
-      "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/k5gkr3f5.tvv3 Colour Mushroom#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ojr25j0t3k",
-      "Integrity": "9Ih8LHvezsdeVc4Y3qgD/VE8veSwKapnQ4EQcvq2qr0=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/k5gkr3f5.tvv3 Colour Mushroom.jpg"
-    },
-    {
       "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/logo.png",
       "SourceId": "c#Backend",
       "SourceType": "Discovered",
@@ -1590,6 +1590,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Images/logo.png"
+    },
+    {
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/vkcwjrvc.ocz3 colour mushroom 2.jpg",
+      "SourceId": "c#Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
+      "BasePath": "_content/c#Backend",
+      "RelativePath": "Images/vkcwjrvc.ocz3 colour mushroom 2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "11i6hv4zfj",
+      "Integrity": "O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/vkcwjrvc.ocz3 colour mushroom 2.jpg"
     },
     {
       "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/js/site.js",
@@ -4088,8 +4109,254 @@
       ]
     },
     {
-      "Route": "Images/0mcmohks.tyn3 colour mushroom 2.11i6hv4zfj.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mcmohks.tyn3 colour mushroom 2.jpg",
+      "Route": "Images/0mmpu34q.i0ubrittle.jpeg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mmpu34q.i0ubrittle.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "475050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VDz264uGSzSHuw7UAzGGZ7qEAliYpahgpn2k8gGOVhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VDz264uGSzSHuw7UAzGGZ7qEAliYpahgpn2k8gGOVhE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/0mmpu34q.i0ubrittle.ka307j67qh.jpeg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mmpu34q.i0ubrittle.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "475050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VDz264uGSzSHuw7UAzGGZ7qEAliYpahgpn2k8gGOVhE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ka307j67qh"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/0mmpu34q.i0ubrittle.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VDz264uGSzSHuw7UAzGGZ7qEAliYpahgpn2k8gGOVhE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/2lhbaolg.sncBlock Colour Mushroom.826egb4iz1.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/2lhbaolg.sncBlock Colour Mushroom.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "777531"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:14:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "826egb4iz1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/2lhbaolg.sncBlock Colour Mushroom.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo="
+        }
+      ]
+    },
+    {
+      "Route": "Images/2lhbaolg.sncBlock Colour Mushroom.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/2lhbaolg.sncBlock Colour Mushroom.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "777531"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:14:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo="
+        }
+      ]
+    },
+    {
+      "Route": "Images/30oegsbi.vidAmethyst.9uom034u4e.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/30oegsbi.vidAmethyst.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "624569"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vyxcxfGXyarWmgLam2txrXDfyqakJIvOLykncgCGMi8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:22:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9uom034u4e"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/30oegsbi.vidAmethyst.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vyxcxfGXyarWmgLam2txrXDfyqakJIvOLykncgCGMi8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/30oegsbi.vidAmethyst.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/30oegsbi.vidAmethyst.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "624569"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vyxcxfGXyarWmgLam2txrXDfyqakJIvOLykncgCGMi8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 21:22:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vyxcxfGXyarWmgLam2txrXDfyqakJIvOLykncgCGMi8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/b5zohhbm.nwk3 colour mushroom 2.11i6hv4zfj.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/b5zohhbm.nwk3 colour mushroom 2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4110,7 +4377,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 23:30:06 GMT"
+          "Value": "Sun, 16 Mar 2025 19:46:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4124,7 +4391,7 @@
         },
         {
           "Name": "label",
-          "Value": "Images/0mcmohks.tyn3 colour mushroom 2.jpg"
+          "Value": "Images/b5zohhbm.nwk3 colour mushroom 2.jpg"
         },
         {
           "Name": "integrity",
@@ -4133,8 +4400,8 @@
       ]
     },
     {
-      "Route": "Images/0mcmohks.tyn3 colour mushroom 2.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/0mcmohks.tyn3 colour mushroom 2.jpg",
+      "Route": "Images/b5zohhbm.nwk3 colour mushroom 2.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/b5zohhbm.nwk3 colour mushroom 2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4155,7 +4422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 23:30:06 GMT"
+          "Value": "Sun, 16 Mar 2025 19:46:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4166,88 +4433,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk="
-        }
-      ]
-    },
-    {
-      "Route": "Images/btpwv0rs.0m2Black Obsidian.10cd92zqp1.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/btpwv0rs.0m2Black Obsidian.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1226727"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/+DrGWBjMEfh6LVbC/lgerFciXuZGsbaAGlnSffM3nQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 23:32:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "10cd92zqp1"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/btpwv0rs.0m2Black Obsidian.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/+DrGWBjMEfh6LVbC/lgerFciXuZGsbaAGlnSffM3nQ="
-        }
-      ]
-    },
-    {
-      "Route": "Images/btpwv0rs.0m2Black Obsidian.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/btpwv0rs.0m2Black Obsidian.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1226727"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/+DrGWBjMEfh6LVbC/lgerFciXuZGsbaAGlnSffM3nQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 23:32:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/+DrGWBjMEfh6LVbC/lgerFciXuZGsbaAGlnSffM3nQ="
         }
       ]
     },
@@ -4334,170 +4519,6 @@
       ]
     },
     {
-      "Route": "Images/gwkv1fhx.35eBlock Colour Mushroom.826egb4iz1.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/gwkv1fhx.35eBlock Colour Mushroom.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "777531"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 10:47:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "826egb4iz1"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/gwkv1fhx.35eBlock Colour Mushroom.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/gwkv1fhx.35eBlock Colour Mushroom.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/gwkv1fhx.35eBlock Colour Mushroom.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "777531"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 10:47:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-MPKcH5RUQSNLPJuuWJsK01X/R2eZBBeeb0TdA93AoRo="
-        }
-      ]
-    },
-    {
-      "Route": "Images/k5gkr3f5.tvv3 Colour Mushroom.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/k5gkr3f5.tvv3 Colour Mushroom.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "777524"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Ih8LHvezsdeVc4Y3qgD/VE8veSwKapnQ4EQcvq2qr0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 00:16:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-9Ih8LHvezsdeVc4Y3qgD/VE8veSwKapnQ4EQcvq2qr0="
-        }
-      ]
-    },
-    {
-      "Route": "Images/k5gkr3f5.tvv3 Colour Mushroom.ojr25j0t3k.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/k5gkr3f5.tvv3 Colour Mushroom.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "777524"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9Ih8LHvezsdeVc4Y3qgD/VE8veSwKapnQ4EQcvq2qr0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 00:16:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ojr25j0t3k"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/k5gkr3f5.tvv3 Colour Mushroom.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-9Ih8LHvezsdeVc4Y3qgD/VE8veSwKapnQ4EQcvq2qr0="
-        }
-      ]
-    },
-    {
       "Route": "Images/logo.png",
       "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/logo.png",
       "Selectors": [],
@@ -4576,6 +4597,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pxaf26cLj840TN9HT/YS2EdSGujdXJZSlDeAyvGnPHw="
+        }
+      ]
+    },
+    {
+      "Route": "Images/vkcwjrvc.ocz3 colour mushroom 2.11i6hv4zfj.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/vkcwjrvc.ocz3 colour mushroom 2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "896457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 13:25:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "11i6hv4zfj"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/vkcwjrvc.ocz3 colour mushroom 2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk="
+        }
+      ]
+    },
+    {
+      "Route": "Images/vkcwjrvc.ocz3 colour mushroom 2.jpg",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/vkcwjrvc.ocz3 colour mushroom 2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "896457"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 13:25:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O9JDIe7rY7nRVYFoqX5dPWwGBspxe8+5n+3nG4RcIjk="
         }
       ]
     },

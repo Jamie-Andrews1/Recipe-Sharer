@@ -162,7 +162,7 @@ namespace cBackend.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ImagePath = table.Column<string>(type: "TEXT", nullable: false),
+                    ImagePath = table.Column<string>(type: "TEXT", nullable: true),
                     Title = table.Column<string>(type: "TEXT", maxLength: 60, nullable: false),
                     Description = table.Column<string>(type: "TEXT", maxLength: 400, nullable: false),
                     DateCreated = table.Column<DateTime>(type: "TEXT", nullable: false),
