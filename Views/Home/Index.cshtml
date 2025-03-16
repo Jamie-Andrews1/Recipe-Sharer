@@ -9,8 +9,8 @@
     </div>
     <div class="homeText">
         <a asp-controller="Blogs" asp-action="Index" style="text-decoration: none; color: currentColor;">
-            <h1 class=" display-4">My Blog</h1>
-            <h2>Adventures in codeland.</h2>
+            <h1 class=" display-4">Recipes</h1>
+            <h2>Find something tasty.</h2>
         </a>
     </div>
     <div class="two align-self-end">
@@ -23,8 +23,8 @@
     const imgBody = document.querySelector("body");
     const giraffe = document.querySelectorAll(".imgWrapper")
 
-    for (let i of giraffe) {
-        i.addEventListener("mousemove", (event) => {
+    for (let i = 0; i < giraffe.length; i++) {
+        giraffe[i].addEventListener("mousemove", (event) => {
             const { currentTarget: target } = event;
             const coordX = event.clientX;
             const coordY = event.clientY;
@@ -33,13 +33,22 @@
             let x = coordX - rect.left - rect.width / 2;
             let y = coordY - rect.top - rect.height / 2;
 
-            const rotateX = (-y / rect.height) * 20;
-            const rotateY = (x / rect.width) * 20;
+            if (i === 0) {
+                const rotateX = (-y / rect.height) * 20;
+                const rotateY = (x / rect.width) * 20;
 
-            i.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                giraffe[0].style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            }
+            if (i === 1) {
+
+                const rotateX = (y / rect.height) * 20;
+                const rotateY = (-x / rect.width) * 20;
+
+                giraffe[1].style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            }
         })
-        i.addEventListener('mouseleave', () => {
-            i.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        giraffe[i].addEventListener('mouseleave', () => {
+            giraffe[i].style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
     }
 </script>

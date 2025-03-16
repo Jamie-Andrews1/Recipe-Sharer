@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Blogs.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace c_Backend.Controllers;
@@ -23,6 +24,7 @@ public class HomeController : Controller
         return View();
     }
 
+    [AllowAnonymous]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

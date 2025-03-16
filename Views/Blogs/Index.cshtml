@@ -6,18 +6,22 @@
 
 <h1>My Adventures</h1>
 
-    <a class="nav-link" asp-action="Create">Create New</a>
+<a class="nav-link" asp-action="Create">Create New</a>
 
 <div class="blogs">
-     @foreach (var item in Model.Blogs!)
-        {
+    @foreach (var item in Model.Blogs!)
+    {
         <div class="blog">
             <img src="@item.ImagePath" alt="Image" />
             <div class="blogTxt">
                 <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
                 <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                    <a asp-action="Details" asp-route-id="@item.Id">View</a>
+                @if (item.User.UserName != null)
+                {
+                    <p>By @Html.DisplayFor(modelItem => item.User.UserName)</p>
+                }
+                <a asp-action="Details" asp-route-id="@item.Id">View</a>
             </div>
         </div>
-        }
+    }
 </div>

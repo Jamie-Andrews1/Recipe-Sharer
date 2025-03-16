@@ -1,8 +1,10 @@
-@using System.IO
+@using System.Security.Claims
+@using Users.Models
 @model Blogs.Models.Blog
 
 @{
     ViewData["Title"] = "Details";
+    var userId = ViewData["UserId"] as string;
 }
 
 <h1>Details</h1>
@@ -10,9 +12,16 @@
     <div class="blog">
         <img src="~/@Model.ImagePath" alt="Image" />
         <div class="blogTxt">
+            <p>@Html.DisplayFor(model => model.DateCreated)</p>
             <h3>@Html.DisplayFor(model => model.Title)</h3>
             <p>@Html.DisplayFor(model => model.Description)</p>
-            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            @if (User.Identity != null)
+            {
+                @if (User.Identity.IsAuthenticated && Model.UserId == userId)
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                }
+            }
         </div>
         <div style="text-align: center;">
             <a asp-action="Index">Back to Main</a>

@@ -1,3 +1,4 @@
 {
-  "razor.format.codeBlockBraceOnNextLine": true
+  "razor.format.codeBlockBraceOnNextLine": true,
+  "editor.autoSurround": "never"
 }

@@ -1,6 +1,5 @@
-using Blogs.Data;
+using Application.Data;
 using Identity;
-using Identity.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +9,6 @@ using Users.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add database
-builder.Services.AddDbContext<BlogContext>(options =>
-       options.UseSqlite(builder.Configuration.GetConnectionString("BlogContext") ?? throw new InvalidOperationException("Connection string 'BlogContext' not found.")));
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext")));
 

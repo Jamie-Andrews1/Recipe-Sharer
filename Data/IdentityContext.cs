@@ -1,17 +1,27 @@
-using Microsoft.AspNetCore.Identity;
+using Blogs.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Users.Models;
 
-namespace Identity.Data
+namespace Application.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :
             base(options)
         {
         }
-        public DbSet<User> Identity { get; set; } = default!;
 
+        public DbSet<Blog> Blogs { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<User>()
+            .HasMany(u => u.Blogs)
+            .WithOne(b => b.User)
+            .HasForeignKey(b => b.UserId);
+        }
     }
 }

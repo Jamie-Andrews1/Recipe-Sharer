@@ -278,7 +278,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/bundle/c#Backend.styles.css
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/scopedcss/projectbundle/c#Backend.bundle.scp.css
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-61n19gt1b8.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/je17n555hq-bqjiyaj88i.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/o2chdfcrwt-c2jlpeoesf.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/hrgbr74ww6-erw9l3u2r3.gz
@@ -357,4 +356,5 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/6makj9d3py-1jb69e76f4.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/yi0j3hr053-mo1f5uecr7.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/19slnno5qw-pg0cdz024x.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-lj3ctu56pt.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-r5plknxdnv.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-xkyxai2k78.gz

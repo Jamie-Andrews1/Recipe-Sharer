@@ -1,5 +1,6 @@
+using System.Security.Claims;
 using System.Web;
-using Blogs.Data;
+using Application.Data;
 using Blogs.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +10,9 @@ namespace Blogs.Controllers
 {
     public class BlogsController : Controller
     {
-        private readonly BlogContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public BlogsController(BlogContext context)
+        public BlogsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -27,7 +28,7 @@ namespace Blogs.Controllers
             }
             var blogs = new ListBlogs
             {
-                Blogs = await _context.Blogs.ToListAsync()
+                Blogs = await _context.Blogs.Include(b => b.User).ToListAsync()
             };
 
 
@@ -46,12 +47,14 @@ namespace Blogs.Controllers
             {
                 return NotFound();
             }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var Blog = await _context.Blogs
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (Blog == null)
             {
                 return NotFound();
             }
+            ViewData["UserId"] = userId;
 
             return View(Blog);
         }
@@ -84,6 +87,9 @@ namespace Blogs.Controllers
                         blog.ImagePath = "Images/" + myPath;
                     }
 
+                    blog.DateCreated = DateTime.UtcNow;
+
+                    blog.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
 
 
                     _context.Add(blog);
