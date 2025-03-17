@@ -1,9 +1,34 @@
+.recipeHead {
+  margin-top: 2rem;
+  & > * {
+    padding-top: 2rem;
+  }
+  & .btn {
+    border: 1px solid currentColor;
+  }
+  & h1 {
+    justify-self: center;
+  }
+}
+.searches {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > * {
+    margin-bottom: 1rem;
+  }
+  & p {
+    margin: 0;
+  }
+}
 .blogs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40vmin, 1fr));
   width: 100%;
   justify-items: center;
   gap: 2rem;
+  margin-top: 4rem;
 }
 .nav-link {
   margin-top: 3px;
@@ -41,4 +66,8 @@
     position: relative;
     max-width: 80ch;
   }
+}
+.pageBtns {
+  width: fit-content;
+  margin-inline: auto;
 }

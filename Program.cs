@@ -8,10 +8,10 @@ using Users.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext")));
-
 
 builder.Services.AddAuthorization();
 

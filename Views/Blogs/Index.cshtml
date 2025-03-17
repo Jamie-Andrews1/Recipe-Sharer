@@ -1,32 +1,62 @@
 @using myStringHelper;
 
-@model Blogs.Models.ListBlogs
+@model PaginatedList<Blogs.Models.Blog>
+
 @{
     ViewData["Title"] = "Recipes";
 }
 
-<h1>Recipe Collection</h1>
+<div class="recipeHead">
+    <h1>Recipe Collection</h1>
 
-<a class="nav-link" asp-action="Create">Create New</a>
-
-<span>Sort By:
-    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">Title</a>
-    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Date Created</a>
-</span>
+    <a class="nav-link" asp-action="Create">Create New</a>
+    <div class="searches">
+        <form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    <label><input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" /></label>
+                    <input type="submit" value="Search" class="btn btn-default" /> |
+                    <a asp-action="Index">Back to Full List</a>
+                </p>
+            </div>
+        </form>
+        <div>Sort By:
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]"
+                asp-route-currentFilter="@ViewData["CurrentFilter"]">Title</a>
+            <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]"
+                asp-route-currentFilter="@ViewData["CurrentFilter"]">Date Created</a>
+        </div>
+    </div>
+</div>
 <div class="blogs">
-    @foreach (var item in Model.Blogs!)
+    @foreach (var item in Model)
     {
         <div class="blog">
             <img src="@item.ImagePath" alt="Image" />
             <div class="blogTxt">
                 <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
-                <p>@Html.DisplayFor(modelItem => item.Description)</p>
                 @if (item.User.UserName != null)
                 {
                     <p>By @Html.DisplayFor(modelItem => item.User.UserName)</p>
                 }
                 <a asp-action="Details" asp-route-id="@item.Id">View</a>
+
             </div>
         </div>
     }
+</div>
+<div class="pageBtns">
+    @{
+        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    }
+
+    <a asp-action="Index" asp-route-sortOrder="@ViewData["CurrentSort"]" asp-route-pageNumber="@(Model.PageIndex - 1)"
+        asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index" asp-route-sortOrder="@ViewData["CurrentSort"]" asp-route-pageNumber="@(Model.PageIndex + 1)"
+        asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn btn-default @nextDisabled">
+        Next
+    </a>
 </div>

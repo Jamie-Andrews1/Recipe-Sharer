@@ -5,6 +5,8 @@ using Blogs.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace Blogs.Controllers
 {
@@ -18,21 +20,39 @@ namespace Blogs.Controllers
         }
 
         // Get Blogs
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder, string searchString, string currentFilter, int? pageNumber)
         {
 
             if (_context.Blogs == null)
             {
                 return Problem("Entity set 'BlogContext.Blog' is null.");
             }
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
+
 
             var blogs = from s in _context.Blogs select s;
 
             if (blogs == null)
             {
                 return View("NoBlogs");
+            }
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                blogs = blogs.Where(s => s.Title!.Contains(searchString)
+                                       || s.Description!.Contains(searchString));
             }
 
             switch (sortOrder)
@@ -51,15 +71,11 @@ namespace Blogs.Controllers
                     break;
             }
 
-            var recipes = new ListBlogs
-            {
-                Blogs = await blogs.AsNoTracking().Include(b => b.User).ToListAsync()
-            };
-
-            return View(recipes);
+            int pageSize = 3;
+            return View(await PaginatedList<Blog>.CreateAsync(blogs.AsNoTracking().Include(b => b.User), pageNumber ?? 1, pageSize));
         }
 
-        //Get: Blog
+        //Get: Recipes
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -73,12 +89,16 @@ namespace Blogs.Controllers
             {
                 return NotFound();
             }
+
+            DateOnly dateOnly = DateOnly.FromDateTime(Blog.DateCreated);
+
+            ViewData["Date"] = dateOnly;
             ViewData["UserId"] = userId;
 
             return View(Blog);
         }
 
-        // Get: Create Blogs
+        // Get: Create Recipe
         [Authorize]
         public IActionResult Create()
         {
@@ -102,10 +122,14 @@ namespace Blogs.Controllers
                     {
                         var myPath = Path.GetRandomFileName() + file.FileName;
                         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", myPath);
-                        using (var stream = new FileStream(filePath, FileMode.Create))
+
+                        using (var image = Image.Load(file.OpenReadStream()))
                         {
-                            await file.CopyToAsync(stream);
+                            image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2));
+
+                            image.Save(filePath);
                         }
+
                         blog.ImagePath = "Images/" + myPath;
                     }
 
@@ -157,6 +181,8 @@ namespace Blogs.Controllers
                 return NotFound();
             }
             ModelState.Remove("file");
+            ModelState.Remove("UserId");
+            ModelState.Remove("User");
 
             if (ModelState.IsValid)
             {
@@ -166,9 +192,12 @@ namespace Blogs.Controllers
                     {
                         var myPath = Path.GetRandomFileName() + file.FileName;
                         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Images", myPath);
-                        using (var stream = new FileStream(filePath, FileMode.Create))
+
+                        using (var image = Image.Load(file.OpenReadStream()))
                         {
-                            await file.CopyToAsync(stream);
+                            image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2));
+
+                            image.Save(filePath);
                         }
                         blog.ImagePath = "Images/" + myPath;
                     }
@@ -177,6 +206,8 @@ namespace Blogs.Controllers
                         blog.ImagePath = HttpUtility.UrlDecode(url).TrimEnd('/');
 
                     }
+                    blog.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+
                     _context.Update(blog);
                     await _context.SaveChangesAsync();
                 }

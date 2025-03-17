@@ -332,7 +332,6 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/b6gqscepwd-muycvpuwrr.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/rq7cudqngl-87fc7y1x7t.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/90efj95dqh-jfsiqqwiad.gz
-/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/82qtezg7t9-57h62c80an.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/4kcbymp3iu-quk1wnjz5t.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/9oqj6emytq-quk1wnjz5t.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/staticwebassets.build.json
@@ -358,3 +357,5 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/19slnno5qw-pg0cdz024x.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8y1p1rzgv-r5plknxdnv.gz
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-xkyxai2k78.gz
+/home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/82qtezg7t9-r8bx6wwb0a.gz
+/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/SixLabors.ImageSharp.dll
