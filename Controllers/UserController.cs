@@ -77,11 +77,11 @@ public class UsersController : Controller
 
                     return RedirectToLocal(returnUrl!);
                 }
-            }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return View(model);
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
             }
         }
         return View(model);

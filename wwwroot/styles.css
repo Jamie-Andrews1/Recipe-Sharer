@@ -1,13 +1,45 @@
+a {
+  color: currentColor;
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.5s ease;
+  &:hover,
+  &:focus-visible {
+    color: darkviolet;
+
+    border-bottom: 3px solid currentColor;
+  }
+}
 .recipeHead {
-  margin-top: 2rem;
+  margin-top: 4rem;
   & > * {
     padding-top: 2rem;
   }
   & .btn {
     border: 1px solid currentColor;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: opacity 1s ease;
+    &:hover {
+      opacity: 0.5;
+    }
   }
   & h1 {
+    padding: 0;
+    margin-block: 10px;
+    transform: skew(5deg, 5deg) rotate(5deg);
     justify-self: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 .searches {
@@ -27,6 +59,7 @@
   grid-template-columns: repeat(auto-fit, minmax(40vmin, 1fr));
   width: 100%;
   justify-items: center;
+  align-items: anchor-center;
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -52,6 +85,7 @@
     font-weight: 400;
     display: flex;
     flex-direction: column;
+    text-overflow: ellipsis;
     & * {
       padding: 1rem;
     }

@@ -125,7 +125,7 @@ namespace Blogs.Controllers
 
                         using (var image = Image.Load(file.OpenReadStream()))
                         {
-                            image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2));
+                            image.Mutate(x => x.Resize(0, 800));
 
                             image.Save(filePath);
                         }
@@ -195,7 +195,7 @@ namespace Blogs.Controllers
 
                         using (var image = Image.Load(file.OpenReadStream()))
                         {
-                            image.Mutate(x => x.Resize(image.Width / 2, image.Height / 2));
+                            image.Mutate(x => x.Resize(0, 800));
 
                             image.Save(filePath);
                         }
@@ -249,12 +249,20 @@ namespace Blogs.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-            Console.WriteLine("hello");
             try
             {
                 var blog = await _context.Blogs.FindAsync(id);
+
                 if (blog != null)
                 {
+                    var filePath = blog.ImagePath;
+                    if (filePath != null)
+                    {
+                        string resolvedPath = Path.Combine("wwwroot", filePath);
+                        var remover = new FileRemover(resolvedPath);
+                        bool success = remover.Remove();
+                    }
+
                     _context.Blogs.Remove(blog);
                 }
 
