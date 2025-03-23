@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Application.Data;
 using c_Backend.Controllers;
 using Identity;
@@ -36,6 +37,7 @@ public class UsersController : Controller
         return View();
     }
 
+    [HttpGet]
     [AllowAnonymous]
     public async Task<IActionResult> Login(string? returnUrl = null)
     {
@@ -47,21 +49,27 @@ public class UsersController : Controller
     }
     // Login
     [HttpPost]
+    [AllowAnonymous]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(Login model, string? returnUrl = null)
     {
 
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            if (!string.IsNullOrEmpty(model.Email))
+
+            var user = await _userManager.FindByEmailAsync(model.Email!);
+            if (user != null && model.Password != null)
             {
 
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password!, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
 
-                if (result.Succeeded)
+                var userId = _signInManager.Context.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                if (result.Succeeded && userId != null && user.Email != null)
+
                 {
-
-                    string access_token = _tokenGenerator.GeneratorToken(model.Email, model.Password!);
+                    string access_token = _tokenGenerator.GeneratorToken(user.Email, userId);
 
                     _logger.LogInformation("User logged in.");
 
@@ -70,15 +78,22 @@ public class UsersController : Controller
                         HttpOnly = true,
                         Secure = true,
                         SameSite = SameSiteMode.Strict,
-                        Expires = DateTime.UtcNow.AddHours(1)
+                        Expires = DateTime.UtcNow.AddHours(3)
                     });
 
                     TempData["Success"] = "Login Successful!";
 
                     return RedirectToLocal(returnUrl!);
                 }
+                if (result.IsLockedOut)
+                {
+                    _logger.LogWarning("User account locked out.");
+                    return RedirectToAction(nameof(Lockout));
+                }
                 else
                 {
+                    _logger.LogInformation("User Failed to login.");
+
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return View(model);
                 }
@@ -88,6 +103,12 @@ public class UsersController : Controller
 
     }
 
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult Lockout()
+    {
+        return View();
+    }
 
     [AllowAnonymous]
     public IActionResult Register(string? returnUrl = null)
@@ -114,13 +135,13 @@ public class UsersController : Controller
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
-                    var access_token = _tokenGenerator.GeneratorToken(user.Email!, model.Password!);
+                    var access_token = _tokenGenerator.GeneratorToken(user.Email!, user.Id);
                     Response.Cookies.Append("JwtToken", access_token, new CookieOptions
                     {
                         HttpOnly = true,
                         Secure = true,
                         SameSite = SameSiteMode.Strict,
-                        Expires = DateTime.UtcNow.AddHours(1)
+                        Expires = DateTime.UtcNow.AddHours(3)
                     });
 
                     TempData["Success"] = "Login Successful!";

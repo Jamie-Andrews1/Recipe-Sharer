@@ -2,6 +2,7 @@ using System.Security.Claims;
 using System.Web;
 using Application.Data;
 using Blogs.Models;
+using Markdig;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -51,8 +52,7 @@ namespace Blogs.Controllers
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                blogs = blogs.Where(s => s.Title!.Contains(searchString)
-                                       || s.Description!.Contains(searchString));
+                blogs = blogs.Where(s => s.Title!.Contains(searchString) || s.Description!.Contains(searchString));
             }
 
             switch (sortOrder)
@@ -85,6 +85,7 @@ namespace Blogs.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var Blog = await _context.Blogs
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (Blog == null)
             {
                 return NotFound();
@@ -206,6 +207,9 @@ namespace Blogs.Controllers
                         blog.ImagePath = HttpUtility.UrlDecode(url).TrimEnd('/');
 
                     }
+
+                    blog.DateCreated = DateTime.UtcNow;
+
                     blog.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
 
                     _context.Update(blog);

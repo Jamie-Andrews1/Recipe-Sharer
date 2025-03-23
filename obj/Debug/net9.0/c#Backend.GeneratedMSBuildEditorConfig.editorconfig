@@ -60,10 +60,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jamie/Documents/html/c\#Backend/Views/Manage/_ManageNav.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlL19NYW5hZ2VOYXYuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/jamie/Documents/html/c\#Backend/Views/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlL19TdGF0dXNNZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/jamie/Documents/html/c\#Backend/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jamie/Documents/html/c\#Backend/Views/Users/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvTG9ja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/jamie/Documents/html/c\#Backend/Views/Users/Login.cshtml]

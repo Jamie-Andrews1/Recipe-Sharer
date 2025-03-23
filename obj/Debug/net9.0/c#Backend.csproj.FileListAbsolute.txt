@@ -359,3 +359,4 @@
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/q8499wav6t-xkyxai2k78.gz
 /home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/SixLabors.ImageSharp.dll
 /home/jamie/Documents/html/c#Backend/obj/Debug/net9.0/compressed/82qtezg7t9-j6e4xsk6er.gz
+/home/jamie/Documents/html/c#Backend/bin/Debug/net9.0/Markdig.dll

@@ -8,7 +8,6 @@
 
 <div class="recipeHead">
     <h1>Recipe Collection</h1>
-
     <a class="nav-link" asp-action="Create">Create New</a>
     <div class="searches">
         <form asp-action="Index" method="get">
@@ -34,7 +33,7 @@
         <div class="blog">
             <img src="@item.ImagePath" alt="Image" />
             <div class="blogTxt">
-                <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
                 @if (item.User.UserName != null)
                 {
                     <p>By @Html.DisplayFor(modelItem => item.User.UserName)</p>

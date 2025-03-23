@@ -13,7 +13,7 @@ public class TokenGenerator
     {
         _configuration = configuration;
     }
-    public string GeneratorToken(string email, string Password)
+    public string GeneratorToken(string email, string Id)
     {
 
         var tokenHandler = new JwtSecurityTokenHandler();
@@ -21,8 +21,8 @@ public class TokenGenerator
 
         var claims = new List<Claim> {
             new (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new (JwtRegisteredClaimNames.Sub, Password),
             new (JwtRegisteredClaimNames.Email, email),
+            new (JwtRegisteredClaimNames.Sub, Id)
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

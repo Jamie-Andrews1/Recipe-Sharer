@@ -13,8 +13,9 @@
         <img src="~/@Model.ImagePath" alt="Image" />
         <div class="blogTxt">
             <p>@ViewData["Date"]</p>
-            <h3>@Html.DisplayFor(model => model.Title)</h3>
-            <p>@Html.DisplayFor(model => model.Description)</p>
+            <h2>@Html.DisplayFor(model => model.Title)</h2>
+            @Html.Raw(Blog.ParseMarkdown(Model.Description!))
+
             @if (User.Identity != null)
             {
                 @if (User.Identity.IsAuthenticated && Model.UserId == userId)

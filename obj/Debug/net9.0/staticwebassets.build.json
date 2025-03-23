@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TnFMIWm1oAmkpO0jxw3mCTLE6Y0QHotoS9GAD8IQBSs=",
+  "Hash": "TCyKbQjYbLlSp844kvRmgXdd0G8onVxrpP0P1TwayYE=",
   "Source": "c#Backend",
   "BasePath": "_content/c#Backend",
   "Mode": "Default",
@@ -1466,12 +1466,12 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/43is3ozb.4jp3 colour mushroom 2.jpg",
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/3dlck11m.mccChow-mein.webp",
       "SourceId": "c#Backend",
       "SourceType": "Discovered",
       "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
       "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/43is3ozb.4jp3 colour mushroom 2#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/3dlck11m.mccChow-mein#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1480,11 +1480,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jjc1pkk6tq",
-      "Integrity": "vz6uwTvAZ5hIgQlfwLnQFcE7nqqkz8ez7m6KzVsrRnw=",
+      "Fingerprint": "tivrvlgl9v",
+      "Integrity": "q/SwIbyqpEHGk6jtlh02GtV9aYB/gYaAft0/aIMKflU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/43is3ozb.4jp3 colour mushroom 2.jpg"
+      "OriginalItemSpec": "wwwroot/Images/3dlck11m.mccChow-mein.webp"
+    },
+    {
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/bcxtooqo.kpbbeef-patty.webp",
+      "SourceId": "c#Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
+      "BasePath": "_content/c#Backend",
+      "RelativePath": "Images/bcxtooqo.kpbbeef-patty#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oprbilpux4",
+      "Integrity": "9MhFxgPKgP+s7OhM6Ewy44+j8mWoN3UTsGAj5tPhrZc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/bcxtooqo.kpbbeef-patty.webp"
     },
     {
       "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/Ellie.jpg",
@@ -1529,12 +1550,12 @@
       "OriginalItemSpec": "wwwroot/Images/logo.png"
     },
     {
-      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/wx12pnkc.eym20 pound burners.jpeg",
+      "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/ymktflfz.cbxfried-rice2.webp",
       "SourceId": "c#Backend",
       "SourceType": "Discovered",
       "ContentRoot": "/home/jamie/Documents/html/c#Backend/wwwroot/",
       "BasePath": "_content/c#Backend",
-      "RelativePath": "Images/wx12pnkc.eym20 pound burners#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/ymktflfz.cbxfried-rice2#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1543,11 +1564,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r880wecsmx",
-      "Integrity": "Rf7I6G1yUjCoBqJos2tE8v1GTGOlgSwkhG14T1C1FZY=",
+      "Fingerprint": "b193bgn1gf",
+      "Integrity": "gdRETYFqHNy8ju22sH7UMq0MCWZjAlwt2i4i0ilP+qE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/wx12pnkc.eym20 pound burners.jpeg"
+      "OriginalItemSpec": "wwwroot/Images/ymktflfz.cbxfried-rice2.webp"
     },
     {
       "Identity": "/home/jamie/Documents/html/c#Backend/wwwroot/js/site.js",
@@ -4046,8 +4067,8 @@
       ]
     },
     {
-      "Route": "Images/43is3ozb.4jp3 colour mushroom 2.jjc1pkk6tq.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/43is3ozb.4jp3 colour mushroom 2.jpg",
+      "Route": "Images/3dlck11m.mccChow-mein.tivrvlgl9v.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/3dlck11m.mccChow-mein.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4056,19 +4077,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "253028"
+          "Value": "29992"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"vz6uwTvAZ5hIgQlfwLnQFcE7nqqkz8ez7m6KzVsrRnw=\""
+          "Value": "\"q/SwIbyqpEHGk6jtlh02GtV9aYB/gYaAft0/aIMKflU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 20:44:35 GMT"
+          "Value": "Sun, 23 Mar 2025 16:12:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4078,21 +4099,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jjc1pkk6tq"
+          "Value": "tivrvlgl9v"
         },
         {
           "Name": "label",
-          "Value": "Images/43is3ozb.4jp3 colour mushroom 2.jpg"
+          "Value": "Images/3dlck11m.mccChow-mein.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vz6uwTvAZ5hIgQlfwLnQFcE7nqqkz8ez7m6KzVsrRnw="
+          "Value": "sha256-q/SwIbyqpEHGk6jtlh02GtV9aYB/gYaAft0/aIMKflU="
         }
       ]
     },
     {
-      "Route": "Images/43is3ozb.4jp3 colour mushroom 2.jpg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/43is3ozb.4jp3 colour mushroom 2.jpg",
+      "Route": "Images/3dlck11m.mccChow-mein.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/3dlck11m.mccChow-mein.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4101,19 +4122,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "253028"
+          "Value": "29992"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"vz6uwTvAZ5hIgQlfwLnQFcE7nqqkz8ez7m6KzVsrRnw=\""
+          "Value": "\"q/SwIbyqpEHGk6jtlh02GtV9aYB/gYaAft0/aIMKflU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 20:44:35 GMT"
+          "Value": "Sun, 23 Mar 2025 16:12:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4123,7 +4144,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vz6uwTvAZ5hIgQlfwLnQFcE7nqqkz8ez7m6KzVsrRnw="
+          "Value": "sha256-q/SwIbyqpEHGk6jtlh02GtV9aYB/gYaAft0/aIMKflU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bcxtooqo.kpbbeef-patty.oprbilpux4.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/bcxtooqo.kpbbeef-patty.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9MhFxgPKgP+s7OhM6Ewy44+j8mWoN3UTsGAj5tPhrZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 18:20:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oprbilpux4"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/bcxtooqo.kpbbeef-patty.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9MhFxgPKgP+s7OhM6Ewy44+j8mWoN3UTsGAj5tPhrZc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bcxtooqo.kpbbeef-patty.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/bcxtooqo.kpbbeef-patty.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9MhFxgPKgP+s7OhM6Ewy44+j8mWoN3UTsGAj5tPhrZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 18:20:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9MhFxgPKgP+s7OhM6Ewy44+j8mWoN3UTsGAj5tPhrZc="
         }
       ]
     },
@@ -4292,8 +4395,8 @@
       ]
     },
     {
-      "Route": "Images/wx12pnkc.eym20 pound burners.jpeg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/wx12pnkc.eym20 pound burners.jpeg",
+      "Route": "Images/ymktflfz.cbxfried-rice2.b193bgn1gf.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/ymktflfz.cbxfried-rice2.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4302,56 +4405,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "57757"
+          "Value": "122786"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"Rf7I6G1yUjCoBqJos2tE8v1GTGOlgSwkhG14T1C1FZY=\""
+          "Value": "\"gdRETYFqHNy8ju22sH7UMq0MCWZjAlwt2i4i0ilP+qE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 20:45:31 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Rf7I6G1yUjCoBqJos2tE8v1GTGOlgSwkhG14T1C1FZY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/wx12pnkc.eym20 pound burners.r880wecsmx.jpeg",
-      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/wx12pnkc.eym20 pound burners.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "57757"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Rf7I6G1yUjCoBqJos2tE8v1GTGOlgSwkhG14T1C1FZY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Mar 2025 20:45:31 GMT"
+          "Value": "Sun, 23 Mar 2025 17:51:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4361,15 +4427,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "r880wecsmx"
+          "Value": "b193bgn1gf"
         },
         {
           "Name": "label",
-          "Value": "Images/wx12pnkc.eym20 pound burners.jpeg"
+          "Value": "Images/ymktflfz.cbxfried-rice2.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Rf7I6G1yUjCoBqJos2tE8v1GTGOlgSwkhG14T1C1FZY="
+          "Value": "sha256-gdRETYFqHNy8ju22sH7UMq0MCWZjAlwt2i4i0ilP+qE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ymktflfz.cbxfried-rice2.webp",
+      "AssetFile": "/home/jamie/Documents/html/c#Backend/wwwroot/Images/ymktflfz.cbxfried-rice2.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122786"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gdRETYFqHNy8ju22sH7UMq0MCWZjAlwt2i4i0ilP+qE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 17:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gdRETYFqHNy8ju22sH7UMq0MCWZjAlwt2i4i0ilP+qE="
         }
       ]
     },
