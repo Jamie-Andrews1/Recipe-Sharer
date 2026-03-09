@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using Application.Data;
+using Blogs;
 using Blogs.Controllers;
 using Blogs.Models;
 using FluentAssertions;
@@ -277,5 +278,101 @@ public class BlogControllerTests
         context.Blogs.Should().BeEmpty();
 
         result.Should().BeOfType<RedirectToActionResult>();
+    }
+
+    [Fact]
+    public async Task Index_ReturnsFilteredResults_WhenSearchStringProvided()
+    {
+        // 1. Arrange
+        using var context = GetInMemoryContext();
+        var user = new User
+        {
+            UserName = "TestUser",
+            Email = "test@test.com"
+            // Don't add Blogs here to avoid circular reference loops
+        };
+        // Use your helper to add a few variations
+        context.Blogs.AddRange(new List<Blog> {
+        new() { Id = 1, Title = "Amazing Pasta", Description = "Dinner", UserId = "1", User = user },
+        new() { Id = 2, Title = "Homemade Pizza", Description = "Lunch", UserId = "1", User = user },
+        new() { Id = 3, Title = "Cheap Pasta", Description = "Easy", UserId = "1", User = user }
+    });
+        await context.SaveChangesAsync();
+
+        var controller = new BlogsController(context, new FakeFileService());
+        // 2. Act
+        // We search for "Pasta"
+        var result = await controller.Index("Date", "Pasta", "Homemade Pizza", null);
+
+        // 3. Assert
+        var viewResult = result.Should().BeOfType<ViewResult>().Subject;
+        var model = viewResult.Model.Should().BeOfType<PaginatedList<Blog>>().Subject;
+
+        // We expect only 2 results, not all 3
+        model.Count.Should().Be(2);
+        model.All(b => b.Title!.Contains("Pasta")).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task Index_ReturnsSortedResults_WhenSortOrderIsDate()
+    {
+        // 1. Arrange
+        using var context = GetInMemoryContext();
+
+        var user = new User
+        {
+            UserName = "TestUser",
+            Email = "test@test.com"
+            // Don't add Blogs here to avoid circular reference loops
+        };
+
+        var oldBlog = new Blog { Id = 1, Title = "Old", Description = "old post", DateCreated = DateTime.Now.AddDays(-10), UserId = "1", User = user };
+        var newBlog = new Blog { Id = 2, Title = "New", Description = "new post", DateCreated = DateTime.Now, UserId = "1", User = user };
+
+        context.Blogs.AddRange(oldBlog, newBlog);
+        await context.SaveChangesAsync();
+
+        var controller = new BlogsController(context, new FakeFileService());
+
+        // 2. Act - Sorting by date_desc
+        var result = await controller.Index("date_desc", "", "old", null);
+
+        // 3. Assert
+        var viewResult = result.Should().BeOfType<ViewResult>().Subject;
+        var model = viewResult.Model.Should().BeOfType<PaginatedList<Blog>>().Subject;
+
+        // The first item should be the newest one
+        model[0].Title.Should().Be("New");
+    }
+    [Fact]
+    public async Task Index_ReturnsCorrectPage_WhenPageNumberProvided()
+    {
+        // 1. Arrange - Add 4 blogs
+        using var context = GetInMemoryContext();
+
+        var user = new User
+        {
+            UserName = "TestUser",
+            Email = "test@test.com"
+            // Don't add Blogs here to avoid circular reference loops
+        };
+        for (int i = 1; i <= 4; i++)
+        {
+            context.Blogs.Add(new Blog { Id = i, Title = $"Blog {i}", Description = $"hello {i}", UserId = "1", User = user });
+        }
+        await context.SaveChangesAsync();
+
+        var controller = new BlogsController(context, new FakeFileService());
+
+        // 2. Act - Ask for Page 2
+        var result = await controller.Index("Date", null!, null!, 2);
+
+        // 3. Assert
+        var viewResult = result.Should().BeOfType<ViewResult>().Subject;
+        var model = viewResult.Model.Should().BeOfType<PaginatedList<Blog>>().Subject;
+
+        // Page 1 has 3 items. Page 2 should have exactly 1 item (the 4th blog).
+        model.Count.Should().Be(1);
+        model.HasPreviousPage.Should().BeTrue();
     }
 }
