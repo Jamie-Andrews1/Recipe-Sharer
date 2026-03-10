@@ -52,7 +52,9 @@ namespace Blogs.Controllers
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                blogs = blogs.Where(s => s.Title!.Contains(searchString) || s.Description!.Contains(searchString));
+                blogs = blogs.Where(s =>
+                    s.Title != null && s.Title.Contains(searchString.ToLower()) ||
+                    s.Description != null && s.Description!.ToLower().Contains(searchString.ToLower()));
             }
 
             switch (sortOrder)
@@ -270,8 +272,6 @@ namespace Blogs.Controllers
                 return Problem($"An error occurred while deleting the blog: {ex.Message}");
             }
         }
-
-
         private bool BlogExists(int id)
         {
             return _context.Blogs.Any(e => e.Id == id);

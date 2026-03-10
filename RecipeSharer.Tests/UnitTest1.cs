@@ -281,7 +281,7 @@ public class BlogControllerTests
     }
 
     [Fact]
-    public async Task Index_ReturnsFilteredResults_WhenSearchStringProvided()
+    public async Task Index_ReturnsFilteredResults_CaseInsensitiveWithString()
     {
         // 1. Arrange
         using var context = GetInMemoryContext();
@@ -302,7 +302,7 @@ public class BlogControllerTests
         var controller = new BlogsController(context, new FakeFileService());
         // 2. Act
         // We search for "Pasta"
-        var result = await controller.Index("Date", "Pasta", "Homemade Pizza", null);
+        var result = await controller.Index("Date", "pasta", "Homemade Pizza", null);
 
         // 3. Assert
         var viewResult = result.Should().BeOfType<ViewResult>().Subject;

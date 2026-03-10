@@ -18,7 +18,6 @@ public class FileService : IFileService
     {
 
         var myPath = Path.GetRandomFileName() + file.FileName;
-        // Note: Use _environment.WebRootPath instead of GetCurrentDirectory() for better reliability
         var uploadsFolder = Path.Combine(_environment.WebRootPath, "Images");
 
         if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
@@ -27,9 +26,8 @@ public class FileService : IFileService
 
         using (var image = Image.Load(file.OpenReadStream()))
         {
-            // Maintains aspect ratio while setting height to 800
             image.Mutate(x => x.Resize(0, 800));
-            await image.SaveAsync(filePath); // Use SaveAsync for better performance
+            await image.SaveAsync(filePath);
         }
 
         return "Images/" + myPath;
