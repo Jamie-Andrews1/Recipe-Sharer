@@ -18,6 +18,7 @@ This project focuses heavily on the "AAA" of security (Authentication, Authoriza
     *   **Cookie Auth:** Configured for traditional MVC web navigation.
     *   **JWT Bearer Tokens:** Integrated using `Microsoft.AspNetCore.Authentication.JwtBearer`, allowing the platform to support potential mobile or decoupled frontend clients.
 *   **Strict Security Policies:** Custom Identity options enforced for complexity (uppercase, alphanumeric) and security (lockout after 10 failed attempts).
+*   **Markdig Integration:** Utilizes the Markdig library with a custom MarkdownPipeline to convert Markdown strings into sanitized HTML. This allows for advanced formatting (tables, task lists, etc.) while maintaining control over the output.
 
 ## 🛠️ Technical Stack
 *   **Framework:** ASP.NET Core 9.0 MVC
