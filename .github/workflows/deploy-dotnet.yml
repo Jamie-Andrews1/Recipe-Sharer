@@ -1,0 +1,51 @@
+name: Deploy .NET Site to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 🚀 Step 1: Set up .NET SDK and compile the binaries
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x" # Change to '9.0.x' if using .NET 9
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      # Build and compile everything into a single standalone 'publish' folder
+      - name: Publish Application
+        run: dotnet publish --configuration Release --output ./publish
+
+      - name: Deploy to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+        run: |
+          echo "$VPS_SSH_KEY" > key.pem
+          chmod 600 key.pem
+
+          # 🚀 Step 2: Sync ONLY the compiled publish folder to the VPS
+          # We point rsync to the './publish/' directory so it only sends production binaries
+          rsync -avz --ignore-errors -e "ssh -i key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            --delete \
+            ./publish/ $VPS_USER@$VPS_HOST:/srv/myapp/
+
+          ssh -i key.pem \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            $VPS_USER@$VPS_HOST << EOF
+              set -e
+              
+              sudo systemctl restart myapp.service
+              
+          EOF

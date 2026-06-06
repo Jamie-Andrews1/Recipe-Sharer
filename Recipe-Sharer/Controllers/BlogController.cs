@@ -53,7 +53,7 @@ namespace Blogs.Controllers
             if (!string.IsNullOrEmpty(searchString))
             {
                 blogs = blogs.Where(s =>
-                    s.Title != null && s.Title.Contains(searchString.ToLower()) ||
+                    s.Title != null && s.Title.ToLower().Contains(searchString.ToLower()) ||
                     s.Description != null && s.Description!.ToLower().Contains(searchString.ToLower()));
             }
 

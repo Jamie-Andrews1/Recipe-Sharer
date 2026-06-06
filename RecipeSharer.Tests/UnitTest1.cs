@@ -110,17 +110,7 @@ public class BlogControllerTests
         await context.SaveChangesAsync();
         var controller = new BlogsController(context, new FakeFileService());
 
-        // MOCK THE USER: This is the trick for User.FindFirstValue
-        var user = new ClaimsPrincipal(new ClaimsIdentity(
-        [
-            new Claim(ClaimTypes.NameIdentifier, "user-123"),
-        ], "mock"));
-
-        controller.ControllerContext = new ControllerContext()
-        {
-            HttpContext = new DefaultHttpContext() { User = user }
-        };
-
+        SetupMockUser(controller, "user-123");
         var result = await controller.Details(1);
 
         var viewResult = result.Should().BeOfType<ViewResult>().Subject;
@@ -150,14 +140,7 @@ public class BlogControllerTests
 
         var controller = new BlogsController(context, new FakeFileService());
 
-        var user = new ClaimsPrincipal(new ClaimsIdentity([
-        new Claim(ClaimTypes.NameIdentifier, "user-123")
-    ], "mock"));
-        controller.ControllerContext = new ControllerContext()
-        {
-            HttpContext = new DefaultHttpContext() { User = user }
-        };
-
+        SetupMockUser(controller, "user-123");
         var newBlog = CreateTestBlog(id: 0);
         var mockFile = CreateMockFormFile(); // Create the fake image
 
