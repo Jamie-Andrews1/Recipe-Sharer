@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Security.Claims;
 using System.Web;
 using Application.Data;
@@ -117,6 +118,7 @@ namespace Blogs.Controllers
 
             ModelState.Remove("UserId");
             ModelState.Remove("User");
+            ModelState.Remove("FullImageSrc");
 
             if (ModelState.IsValid)
             {
@@ -179,11 +181,13 @@ namespace Blogs.Controllers
             ModelState.Remove("file");
             ModelState.Remove("UserId");
             ModelState.Remove("User");
+            ModelState.Remove("FullImageSrc");
 
             if (ModelState.IsValid)
             {
                 try
                 {
+
                     if (file != null && file.Length > 0)
                     {
                         // blog.ImagePath = await _fileService.SaveImageAsync(file);
@@ -192,7 +196,6 @@ namespace Blogs.Controllers
                     else
                     {
                         blog.ImagePath = HttpUtility.UrlDecode(url).TrimEnd('/');
-
                     }
 
                     blog.DateCreated = DateTime.UtcNow;
