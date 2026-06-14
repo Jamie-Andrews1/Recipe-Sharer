@@ -51,8 +51,8 @@ jobs:
             $VPS_USER@$VPS_HOST << EOF
               set -e
               
-              sudo systemctl daemon-reload
+              systemctl daemon-reload
 
-              sudo systemctl restart myapp.service
+              systemctl restart myapp.service
               
           EOF
