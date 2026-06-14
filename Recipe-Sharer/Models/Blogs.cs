@@ -11,8 +11,9 @@ public class Blog
     public int Id { get; set; }
 
     public string? ImagePath { get; set; }
-    [StringLength(60, MinimumLength = 3)]
+    [StringLength(100, MinimumLength = 3)]
     [Required]
+    public string FullImageSrc => (ImagePath?.StartsWith("http") ?? false) ? ImagePath : $"/{ImagePath?.TrimStart('~', '/')}";
     public string? Title { get; set; }
     [StringLength(5000, MinimumLength = 3)]
     [Required]

@@ -1,3 +1,4 @@
+using Amazon.S3;
 using Application.Data;
 using Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,7 +15,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddScoped<IFileService, FileService>();
+// builder.Services.AddScoped<UserService>();
+// builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IFileService, ImageService>();
 
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
@@ -58,10 +61,17 @@ builder.Services
         };
     });
 
+var awsOptions = builder.Configuration.GetSection("AWS");
+var credentials = new Amazon.Runtime.BasicAWSCredentials(
+    awsOptions["AccessKey"],
+    awsOptions["SecretKey"]
+);
+var region = Amazon.RegionEndpoint.GetBySystemName(awsOptions["Region"]);
 
+builder.Services.AddSingleton<IAmazonS3>(new AmazonS3Client(credentials, region));
 
 builder.Services.AddSingleton<TokenGenerator>();
-// Add services to the container.
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.ConfigureApplicationCookie(options =>
@@ -81,7 +91,7 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+
     app.UseHsts();
 }
 

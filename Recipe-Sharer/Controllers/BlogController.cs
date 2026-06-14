@@ -13,12 +13,13 @@ namespace Blogs.Controllers
     public class BlogsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IFileService _fileService;
+        // private readonly IFileService _fileService;
+        private readonly IFileService _imageService;
 
-        public BlogsController(ApplicationDbContext context, IFileService fileService)
+        public BlogsController(ApplicationDbContext context, IFileService imageService)
         {
             _context = context;
-            _fileService = fileService;
+            _imageService = imageService;
         }
 
         public async Task<IActionResult> Index(string sortOrder, string searchString, string currentFilter, int? pageNumber)
@@ -123,7 +124,9 @@ namespace Blogs.Controllers
                 {
                     if (file != null && file.Length > 0)
                     {
-                        blog.ImagePath = await _fileService.SaveImageAsync(file);
+                        // blog.ImagePath = await _fileService.SaveImageAsync(file);
+                        blog.ImagePath = await _imageService.UploadRecipeImageAsync(file);
+
                     }
 
                     blog.DateCreated = DateTime.UtcNow;
@@ -183,7 +186,8 @@ namespace Blogs.Controllers
                 {
                     if (file != null && file.Length > 0)
                     {
-                        blog.ImagePath = await _fileService.SaveImageAsync(file);
+                        // blog.ImagePath = await _fileService.SaveImageAsync(file);
+                        blog.ImagePath = await _imageService.UploadRecipeImageAsync(file);
                     }
                     else
                     {

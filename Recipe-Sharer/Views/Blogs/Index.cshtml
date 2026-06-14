@@ -1,4 +1,6 @@
-@using myStringHelper;
+@using Microsoft.AspNetCore.Identity
+@using Users.Models
+@inject SignInManager<User> SignInManager
 
 @model PaginatedList<Blogs.Models.Blog>
 
@@ -8,7 +10,12 @@
 
 <div class="recipeHead">
     <h1>Recipe Collection</h1>
+    
+@if (SignInManager.IsSignedIn(User)){
     <a class="nav-link" asp-action="Create">Create New</a>
+} else { 
+    <br />
+}
     <div class="searches">
         <form asp-action="Index" method="get">
             <div class="form-actions no-color">

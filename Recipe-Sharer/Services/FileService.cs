@@ -5,7 +5,8 @@ using SixLabors.ImageSharp.Processing;
 
 namespace RecipeBackend.Services;
 
-public class FileService : IFileService
+// public class FileService : IFileService
+public class FileService
 {
     private readonly IWebHostEnvironment _environment;
 

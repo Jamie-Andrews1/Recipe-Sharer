@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PermitBucketCreationWithPrefix",
+      "Effect": "Allow",
+      "Action": ["s3:CreateBucket", "s3:GetBucketLocation"],
+      "Resource": ["arn:aws:s3:::jamie-recipes-*"]
+    },
+    {
+      "Sid": "RestrictAppDataToThatSpecificBucket",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:GetObject", "s3:DeleteObject"],
+      "Resource": [
+        "arn:aws:s3:::jamie-recipes-*",
+        "arn:aws:s3:::jamie-recipes-*/*"
+      ]
+    }
+  ]
+}

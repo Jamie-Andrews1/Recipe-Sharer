@@ -36,7 +36,12 @@ jobs:
 
           # 🚀 Step 2: Sync ONLY the compiled publish folder to the VPS
           # We point rsync to the './publish/' directory so it only sends production binaries
+
           rsync -avz --ignore-errors -e "ssh -i key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            --exclude="*.db" \
+            --exclude="*.sqlite" \
+            --exclude="appsettings.json" \
+            --exclude="appsettings.Production.json" \
             --delete \
             ./publish/ $VPS_USER@$VPS_HOST:/srv/myapp/
 
@@ -46,6 +51,8 @@ jobs:
             $VPS_USER@$VPS_HOST << EOF
               set -e
               
+              sudo systemctl daemon-reload
+
               sudo systemctl restart myapp.service
               
           EOF

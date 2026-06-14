@@ -10,7 +10,7 @@
 <h1>Details</h1>
 <div class="blogWrapper">
     <div class="blog">
-        <img src="~/@Model.ImagePath" alt="Image" />
+        <img src="@(Model.FullImageSrc)" alt="Image" />
         <div class="blogTxt">
             <p>@ViewData["Date"]</p>
             <h2>@Html.DisplayFor(model => model.Title)</h2>

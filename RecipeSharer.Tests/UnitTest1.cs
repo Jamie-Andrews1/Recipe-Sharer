@@ -9,10 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RecipeBackend.Services;
 using Users.Models;
-using Xunit;
+
 public class FakeFileService : IFileService
 {
-    public Task<string> SaveImageAsync(IFormFile imageFile)
+    public Task<string> UploadRecipeImageAsync(IFormFile imageFile)
     {
         return Task.FromResult("/images/manual-fake.jpg");
     }
@@ -33,10 +33,10 @@ public class BlogControllerTests
     };
 
         var stream = new MemoryStream(fileBytes);
-        return new FormFile(stream, 0, stream.Length, "imageFile", "test.png")
+        return new FormFile(stream, 0, stream.Length, "imageFile", "test.webp")
         {
             Headers = new HeaderDictionary(),
-            ContentType = "image/png"
+            ContentType = "image/webp"
         };
     }
     private static void SeedUser(ApplicationDbContext context, string userId)
@@ -95,7 +95,7 @@ public class BlogControllerTests
             DateCreated = DateTime.Now,
             UserId = userId,
             User = user, // Satisfies the 'required' User property
-            ImagePath = "/images/test.jpg"
+            ImagePath = "/images/test.webp"
         };
     }
 

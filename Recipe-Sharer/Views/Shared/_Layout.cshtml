@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Users.Models
+@inject SignInManager<User> SignInManager
+
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
 
 <head>
@@ -31,9 +35,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Blogs" asp-action="Index">Recipes</a>
                         </li>
+                        
+                        @if (SignInManager.IsSignedIn(User)){
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Blogs" asp-action="Create">Create</a>
                         </li>
+                        }
                     </ul>
                     <div class="dropdown color-modes">
                         <button class="btn btn-link py-2 dropdown-toggle align-items-center" id="bd-theme" type="button"

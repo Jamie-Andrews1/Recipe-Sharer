@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using RecipeBackend.Dtos;
 using Users.Models;
 using Users.Models.AccountViews;
 
@@ -23,14 +24,14 @@ public class UsersController : Controller
         UserManager<User> userManager, SignInManager<User> signInManager,
         ApplicationDbContext context,
         TokenGenerator tokenGenerator,
-        ILogger<UsersController> logger)
+        ILogger<UsersController> logger
+        )
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _context = context;
         _tokenGenerator = tokenGenerator;
         _logger = logger;
-
     }
     public IActionResult Index()
     {
@@ -123,6 +124,14 @@ public class UsersController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(Register model, string? returnUrl = null)
     {
+
+        var totalUsers = _userManager.Users.Count();
+        if (totalUsers >= 3)
+        {
+            ModelState.AddModelError(string.Empty, "Registration is currently closed. Maximum capacity reached.");
+            return RedirectToLocal(returnUrl!);
+        }
+
         if (ModelState.IsValid)
         {
             var user = new User { UserName = model.UserName, Email = model.Email };
@@ -196,4 +205,13 @@ public class UsersController : Controller
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
     }
+
+    // [HttpPost("reset-dev")]
+    // public async Task<IActionResult> DevResetPassword([FromBody] VerifyTokenDto dto)
+    // {
+    //     var success = await _userService.ResetPasswordAsync(dto.Email, dto.NewPassword);
+
+    //     if (!success) return NotFound("User not found");
+    //     return Ok("Password reset successfully");
+    // }
 }
